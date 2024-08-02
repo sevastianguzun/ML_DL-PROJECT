@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "CLUSTERING",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/clustering.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                // USELESS ARGS FOR CLUSTERING MODULE.
+                "--k", "1",
+                "--learning_rate", "5e-4",
+                "--max_epochs", "400",
+                "--batch_size", "64",
+                "--gpu_idx", "0",
+                "--limit_val_batches", "1",
+                "--check_val_every_n_epoch", "1",
+                "--val_check_interval", "1.0",
+                "--log_every_n_steps", "10",
+                "--dataset_fraction", "1.0",
+                "--outpath", "pipeline/outputs",
+                "--oracle_probability", "0.5",
+                "--forced",
+
+                // CLUSTERING MODULE SPECIFC ARGS.
+                "--clustering_method", "HDB",
+                // "--subspace", "0",
+                // "--num_clusters", "6",
+                // "--reduce_dim",
+                // "--train_only",
+                // "--test_only",
+
+                // SHAPES.
+                "--dataset_path", "./data/3dshapes.h5",
+                "--observation", "3",
+                "--noise",
+                "--n_dataset", "4",
+                "--latentdim", "10",
+                "--n_latent_factors", "10",
+                "--detangle_ckpt", "./data/last_DIS_shapes3d_custom_detangle_BS32_E40_NLFactors10_LatentDim10_k1_noise_obs3_op0.5_forced_02-10-2023-23-00.ckpt"
+            ]
+        }
+    ]
+}

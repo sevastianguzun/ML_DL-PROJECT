@@ -2,7 +2,7 @@
 
 ## Installation ##
 **1. Repository setup:**
-* `$ git clone https://github.com/intelligolabs/Detaux`
+* `$ git clone https://github.com/intelligolabs/Detaux](https://github.com/sevastianguzun/ML_DL-PROJECT`
 * Download 3dshapes.h5 from https://console.cloud.google.com/storage/browser/3d-shapes;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 * Move the dataset to the 'data' folder in the root directory of the project.
 
